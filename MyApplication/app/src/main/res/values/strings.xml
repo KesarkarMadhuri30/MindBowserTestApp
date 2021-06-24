@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="str_contact">Contact List</string>
+    <string name="str_fav">Favourites Contact List</string>
+    <string name="str_delete">Deleted Contact List</string>
+</resources>

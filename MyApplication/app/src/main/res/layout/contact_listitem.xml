@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_fav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/padding_10"
+        app:cardElevation="8dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:background="@drawable/card_bg"
+        >
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="@dimen/height_50"
+            android:layout_height="@dimen/height_50"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_gravity="center_vertical"
+
+            android:src="@drawable/image" />
+
+        <TextView
+            android:id="@+id/first_ltter"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:text=""
+            android:fontFamily="@font/bitter_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:textSize="@dimen/text_size_18"
+            android:background="@drawable/rect_bg"
+            android:layout_width="@dimen/height_50"
+            android:layout_height="@dimen/height_50"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User name"
+                android:fontFamily="@font/aref_ruqaa_bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/contact_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Phone no."
+                android:fontFamily="@font/aref_ruqaa_bold"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:layout_weight="0.5"
+           android:weightSum="2"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/unfav_img"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+                <ImageView
+                    android:id="@+id/fav_img"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_baseline_favorite_24"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="1">
+            <ImageView
+                android:id="@+id/delete_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_baseline_delete_24" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
